@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ManPow</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" >
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--End Bootstrap-->
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+<section class="home-section">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-sm-12 logo-wrapper">
+				<img class="logo-img" src="./images/logo.png">
+			</div>
+			<div class="col-sm-12">
+				<div class="state-select-div">
+					<select class="state-select" name="state">
+						<option value="AL">Please Select State</option>
+                        <option value="AL">Alabama</option>
+						<option value="AK">Alaska</option>
+						<option value="AZ">Arizona</option>
+						<option value="AR">Arkansas</option>
+						<option value="CA">California</option>
+						<option value="CO">Colorado</option>
+						<option value="CT">Connecticut</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-sm-12 people-wrapper">
+				<div class="col-sm-3"></div>
+				<div class="col-sm-3 col-xs-6">
+					<div class="home-people-1"><div class="home-people-text">Flip</div></div>
+				</div>
+				<div class="col-sm-3 col-xs-6">
+					<div class="home-people-2"><div class="home-people-text">Hold</div></div>
+				</div>
+				<div class="col-sm-3"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="all-pages-section">
+	
+	<div class="flip-slide1">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="flip-heading">FLIP</h1>
+				</div>
+			</div>
+		</div>
+		<div class="flip-section-wrapper">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-sm-12 other-wrapper">
+						<div class="col-sm-5ths"></div>
+						<div class="col-sm-5ths">
+							<div class="other-people-1"><div class="home-people-text blackbox"><span id="flip_people_1" class="flip-text-div cash-leverage">Cash vs Leverage</span></div></div>
+						</div>
+						<div class="col-sm-5ths">
+							<div class="other-people-2"><div class="home-people-text blackbox"><span id="flip_people_2"  class="flip-text-div lender-lender">Lender vs Lender</span></div></div>
+						</div>
+						<div class="col-sm-5ths">
+							<div class="other-people-3"><a target="_blank" href="https://shermanbridge.wufoo.com/forms/fast-track-application/"><div class="home-people-text blackbox"><span class="flip-text-div fast-track ">FastTrack</span></div></a></div>
+						</div>
+						<div class="col-sm-5ths"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 bottom-button">
+            <button class="pull-left btn btn-primary back_menu"> Back to Menu </button>
+		</div>
+    </div>
+
+	<div class="hold-slide1">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="hold-heading">Hold</h1>
+				</div>
+			</div>
+		</div>
+		<div class="flip-section-wrapper">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-sm-12 other-wrapper">
+						<div class="col-sm-5ths"></div>
+						<div class="col-sm-5ths">
+							<div class="other-people-1"><div class="home-people-text blackbox"><span id="hold_people_1" class="flip-text-div cash-leverage">Cash vs Leverage</span></div></div>
+						</div>
+						<div class="col-sm-5ths">
+							<div class="other-people-2"><div class="home-people-text blackbox"><span id="hold_people_2" class="flip-text-div lender-lender">Lender vs Lender</span></div></div>
+						</div>
+						<div class="col-sm-5ths">
+							<div class="other-people-3"><a target="_blank" href="https://shermanbridge.wufoo.com/forms/fast-track-application/"><div class="home-people-text blackbox"><span class="flip-text-div fast-track ">FastTrack</span></div></a></div>
+						</div>
+						<div class="col-sm-5ths"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 bottom-button">
+            <button class="pull-left btn btn-primary back_menu"> Back to Menu </button>
+	   	</div>
+    </div>
+
+    <!-- Flip Sildes Start  -->   
+    <div id="flip_start">
+    <div class="flip-slide2">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="flip-heading">CASH VS. LEVERAGE</h1>
+				</div>
+			</div>
+		</div>
+		<div class="flip-slide-bottom">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-12 col-xs-12 other-wrapper cal-1-wrapper">
+						<div class="col-sm-4 col-xs-12 flip-cal-top">
+							<div class="calculation-box-1 cal-box-1">
+								<div class="col-sm-12">
+									<div class="col-sm-6 cal-box-heading">Purchase Price</div>
+									<div class="col-sm-6">
+										<span class="cal-dollar">$</span> 
+										<input id="flip_TextBox1" value="270,000" class="cal-1-textbox number_textbox"  oninput="maxLengthCheck(this)" maxlength = "15"  min = "1"/>
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="col-sm-6 cal-box-heading">Repairs</div>
+									<div class="col-sm-6">
+										<span class="cal-dollar">$</span> 
+										<input id="flip_TextBox2"  value="60,000"  class="cal-1-textbox number_textbox" oninput="maxLengthCheck(this)" maxlength = "15"  min = "1" />
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="col-sm-6 cal-box-heading">After Repair Value</div>
+									<div class="col-sm-6">
+										<span class="cal-dollar">$</span> 
+										<input id="flip_TextBox3"  value="450,000" class="cal-1-textbox number_textbox" oninput="maxLengthCheck(this)" maxlength = "15"  min = "1"/>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-2 col-sm-12 cal-btn-wrapper">
+							<input id="flip_calculate" class="flip_calculate" type="button" width="100%" value="Calculate"   />
+						</div>
+					</div>
+
+					<div class="col-sm-12 display-none vertical-seperator">
+						<div class="vertical-seperator-1"></div>
+						<div class="vertical-seperator-2"></div>
+					</div>
+
+					<div class="col-sm-12 flip-cal-bottom">
+						<div class="col-sm-5 flip-cal-2">
+							<div class="calculation-box-1">
+								<div class="col-sm-12 cal-boxes-heading"><h3>Cash Result</h3></div>
+								<div class="col-sm-12 cal-2-textbox-wrapper">
+									<div class="col-sm-5 col-xs-12">
+										<div class="col-sm-12 col-xs-6 cal-box-heading cal-2-title">Cash Result</div>
+										<div class="col-sm-12 col-xs-6"><input id="" class="cal-2-textbox flip_cr" type="text" value="0000" readonly></div>
+									</div>
+                                    <div class="col-sm-2"></div>
+									<div class="col-sm-5 col-xs-12">
+										<div class="col-sm-12 col-xs-6 cal-box-heading cal-2-title">Net Profit</div>
+										<div class="col-sm-12 col-xs-6"><input id="" class="cal-2-textbox flip_np" type="text" value="0000" readonly></div>
+									</div>
+								</div>
+								<div class="col-sm-12 cal-2-textbox-wrapper">
+									<div class="col-sm-3"></div>
+									<div class="col-sm-6 col-xs-12">
+										<div class="col-sm-12 col-xs-6 cal-box-heading cal-2-title roi-heading">ROI</div>
+										<div class="col-sm-12 col-xs-6"><input id="" class="cal-2-textbox roi_text flip_roi" type="text" value="0000" readonly></div>
+									</div>
+									<div class="col-sm-3"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-1 display-none">
+							<div class="horizontal-seperator-1"></div>
+							<div class="horizontal-seperator-2"></div>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="top-umbrella"></div>
+							<div class="flip-stand">
+								<div class="calculation-box-1 thick-border">
+									<div class="col-sm-12 cal-boxes-heading"><h3>Leverage Result</h3></div>
+									<div class="col-sm-12 cal-2-textbox-wrapper">
+										<div class="col-sm-5 col-xs-12">
+											<div class="col-sm-12 col-xs-6 cal-box-heading cal-2-title">Cash Result</div>
+											<div class="col-sm-12 col-xs-6"><input id="flip_lev_cr" class="cal-2-textbox" type="text" value="0000" readonly></div>
+										</div>
+                                        <div class="col-sm-2"></div>
+										<div class="col-sm-5 col-xs-12">
+											<div class="col-sm-12 col-xs-6 cal-box-heading cal-2-title">Net Profit</div>
+											<div class="col-sm-12 col-xs-6"><input id="flip_lev_np" class="cal-2-textbox" type="text" value="0000" readonly></div>
+										</div>
+									</div>
+									<div class="col-sm-12 cal-2-textbox-wrapper">
+										<div class="col-sm-3"></div>
+										<div class="col-sm-6 col-xs-12">
+											<div class="col-sm-12 col-xs-6 cal-box-heading cal-2-title roi-heading">ROI</div>
+											<div class="col-sm-12 col-xs-6"><input id="flip_lev_roi" class="cal-2-textbox" type="text" value="0000" readonly></div>
+										</div>
+										<div class="col-sm-3"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <div class="col-sm-12 bottom-button">
+	    	<div class="flip_back col-sm-4"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></div>
+        	<div class="col-sm-4 back_menu_btn"><button class="btn btn-primary back_menu"> Back to Menu </button></div>
+            <div class="col-sm-4"><button id="flip_power_lev" class="pull-right btn btn-primary"> Power Of Leverage </button></div>
+        </div>
+    </div>
+    
+    <div class="flip-slide3">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1 class="flip-heading">CASH VS. LEVERAGE</h1>
+				</div>
+			</div>
+		</div>
+		<div class="flip-slide-bottom">
+			<div class="container-fluid">
+				<div class="row">
+					
+					<div class="col-sm-12 other-wrapper cal-1-wrapper">
+						<div class="col-sm-4 flip-cal-top">
+							<div class="calculation-box-1 cal-box-1">
+								<div class="col-sm-12">
+									<div class="col-sm-6 cal-box-heading">Purchase Price</div>
+									<div class="col-sm-6">
+										<span class="cal-dollar">$</span> 
+										<input id="pl_text1" value="" class="cal-1-textbox" readonly style="background: #fff;" />
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="col-sm-6 cal-box-heading">Repairs</div>
+									<div class="col-sm-6">
+										<span class="cal-dollar">$</span> 
+										<input id="pl_text2" value="" class="cal-1-textbox" readonly style="background: #fff;" />
+									</div>
+								</div>
+								<div class="col-sm-12">
+									<div class="col-sm-6 cal-box-heading">After Repair Value</div>
+									<div class="col-sm-6">
+										<span class="cal-dollar">$</span> 
+										<input id="pl_text3" value="" class="cal-1-textbox" readonly style="background: #fff;" />
+									</div>
+								</div>
+							</div>
+						</div>
+                                    
+						<div class="col-sm-2">
+						</div>
+					</div>
+
+					<div class="col-sm-12 display-none vertical-seperator">
+						<div class="vertical-seperator-1"></div>
+						<div class="vertical-seperator-2"></div>
+					</div>
+
+					<div class="col-sm-12 flip-cal-bottom">
+						<div class="col-sm-5 flip-cal-2">
+							<div class="calculation-box-1">
+								<div class="col-sm-12 cal-boxes-heading"><h3>Cash Result</h3></div>
+								<div class="col-sm-12 cal-2-textbox-wrapper">
+									<div class="col-sm-5 col-xs-12">
+										<div class="col-sm-12 col-xs-6 cal-box-heading cal-2-title">Cash Result</div>
+										<div class="col-sm-12 col-xs-6">
+											<input id="" class="cal-2-textbox flip_cr" type="text" value="0000" readonly>
+										</div>
+									</div>
+                                    <div class="col-sm-2"></div>
+									<div class="col-sm-5 col-xs-12">
+										<div class="col-sm-12 col-xs-6 cal-box-heading cal-2-title">Net Profit</div>
+										<div class="col-sm-12 col-xs-6">
+											<input id="" class="cal-2-textbox flip_np" type="text" value="0000" readonly>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-12 cal-2-textbox-wrapper">
+									<div class="col-sm-3"></div>
+									<div class="col-sm-6 col-xs-12">
+										<div class="col-sm-12 col-xs-6 cal-box-heading cal-2-title roi-heading">ROI</div>
+										<div class="col-sm-12 col-xs-6"><input id="" class="cal-2-textbox roi_text flip_roi" type="text" value="0000" readonly></div>
+									</div>
+									<div class="col-sm-3"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-1 display-none">
+							<div class="horizontal-seperator-1"></div>
+							<div class="horizontal-seperator-2"></div>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="top-umbrella"></div>
+							<div class="flip-stand">
+								<div class="calculation-box-1 thick-border">
+									<div class="col-sm-12 cal-boxes-heading"><h3 class="pl_title">Power of Leverage</h3><h3 class="profit_x">2X</h3></div>
+                                    <div class="col-sm-12 cal-2-textbox-wrapper">
+										
+									</div>
+									<div class="col-sm-12 cal-2-textbox-wrapper pl_div" >
+										<div class="col-sm-6 col-xs-12">
+											<div class="col-sm-12 col-xs-6 cal-box-heading cal-2-title">Cash Invested</div>
+											<div class="col-sm-12 col-xs-6"><input id="PL_Cash_Invested" class="cal-2-textbox" type="text" value="0000" readonly></div>
+										</div>
+										<div class="col-sm-6 col-xs-12">
+											<div class="col-sm-12 col-xs-6 cal-box-heading cal-2-title">2X Profit</div>
+											<div class="col-sm-12 col-xs-6"><input id="PL_2X_Profit" class="cal-2-textbox" type="text" value="0000" readonly></div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	 	<div class="col-sm-12 bottom-button">
+	    	<div class="flip_back col-sm-4"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></div>
+        	<div class="col-sm-4 back_menu_btn pull-right" style="text-align: right;"><button class="btn btn-primary back_menu"> Back to Menu </button></div>
+        </div>
+        
+    </div>
+    <div id="flip-slide4" class="hold-slide3">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1 class="flip-heading">LENDER VS. LENDER</h1>
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="flip-slide-bottom">
+			<div class="container-fluid">
+				<div class="row">
+					
+					<div class="col-sm-12 other-wrapper cal-1-wrapper">
+						<div class="col-sm-9 flip-cal-top">
+							<div class="calculation-box-1 cal-box-1">
+								<div class="col-sm-12">
+									<div class="hold-box-heading">ASSUMING $100,000 LOAN FOR 90 DAYS</div>
+								</div>
+							</div>
+						</div>
+                                    
+						<div class="col-sm-3">
+							<input id="Flip_Lender_calculate" class="flip_calculate" type="button" width="100%" value="Calculate"   />
+						</div>
+					</div>
+
+					<div class="col-sm-12 display-none vertical-seperator">
+						<div class="vertical-seperator-1"></div>
+						<div class="vertical-seperator-2"></div>
+					</div>
+
+					<div class="col-sm-12 flip-cal-bottom">
+						<div class="col-sm-5 flip-cal-2">
+							<div class="calculation-box-1">
+								<div class="col-sm-12 cal-boxes-heading"><h3>Sherman Bridge</h3></div>
+								<div class="col-sm-12 cal-2-textbox-wrapper">
+									<div class="col-sm-12">
+										<div class="col-sm-2 display-none pull-right"></div>
+										<div class="col-sm-4 col-xs-6 pull-right"><input id="" class="cal-2-textbox" type="text" value="$1,750" readonly></div>
+										<div class="col-sm-4 col-xs-6 pull-right cal-box-heading cal-2-title">Origination</div>
+										<div class="col-sm-2 display-none pull-right"></div>
+									</div>
+									<div class="col-sm-12 cal-2-textbox-wrapper">
+										<div class="col-sm-2 display-none pull-right"></div>
+										<div class="col-sm-4 col-xs-6 pull-right"><input id="" class="cal-2-textbox" type="text" value="$2,135" readonly></div>
+										<div class="col-sm-4 col-xs-6 pull-right cal-box-heading cal-2-title">Interest</div>
+										<div class="col-sm-2 display-none pull-right"></div>
+									</div>
+								<!-- </div>
+								<div class="col-sm-12 cal-2-textbox-wrapper"> -->
+									<div class="col-sm-12 cal-2-textbox-wrapper">
+										<div class="col-sm-2 display-none pull-right"></div>
+										<div class="col-sm-4 col-xs-6 pull-right"><input id="" class="cal-2-textbox roi_text" type="text" value="$3,885" readonly></div>
+										<div class="col-sm-4 col-xs-6 pull-right cal-box-heading cal-2-title roi-heading">Total</div>
+										<div class="col-sm-2 display-none pull-right"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-1 display-none">
+							<div class="horizontal-seperator-1"></div>
+							<div class="horizontal-seperator-2"></div>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="top-umbrella"></div>
+							<div class="flip-stand">
+								<div class="calculation-box-1">
+									<div class="col-sm-12 cal-boxes-heading"><h3>Other Lenders</h3></div>
+									<div class="col-sm-12 cal-2-textbox-wrapper hold-cal-2-textbox">
+										<div class="col-sm-6 col-xs-12">
+											<div class="col-sm-6 col-xs-6 hold_cal-box-heading cal-2-title">Your Points</div>
+											<div class="col-sm-6 col-xs-6"><input id="Flip_Lender1" class="cal-2-textbox number_textbox" value="3.00" oninput="maxLengthCheck(this)" maxlength = "15"  min = "1"><span class="hold_percent">%</span></div>
+										</div>
+										<div class="col-sm-6 col-xs-12">
+											<div class="col-sm-6 col-xs-6 cal-box-heading cal-2-title">Origination</div>
+											<div class="col-sm-6 col-xs-6"><input id="flip_lender_org" class="cal-2-textbox number_textbox" value="" readonly></div>
+										</div>
+										<div class="col-sm-6 col-xs-12 cal-2-textbox-wrapper">
+											<div class="col-sm-6 col-xs-6 hold_cal-box-heading  cal-2-title">Your Rate</div>
+											<div class="col-sm-6 col-xs-6"><input id="Flip_Lender2" class="cal-2-textbox number_textbox" value="13.00" oninput="maxLengthCheck(this)" maxlength = "15"  min = "1"><span class="hold_percent">%</span></div>
+										</div>
+										<div class="col-sm-6 col-xs-12 cal-2-textbox-wrapper">
+											<div class="col-sm-6 col-xs-6 cal-box-heading cal-2-title">Interest</div>
+											<div class="col-sm-6 col-xs-6"><input id="flip_lender_interest" class="cal-2-textbox number_textbox"  value="0000" readonly></div>
+										</div>
+									</div>
+									<div class="col-sm-12 cal-2-textbox-wrapper hold-cal-2-textbox">
+										<div class="col-sm-3 display-none"></div>
+										<div class="col-sm-6 col-xs-12 pull-right">
+											<div class="col-sm-6 col-xs-6 cal-box-heading cal-2-title roi-heading">Total</div>
+											<div class="col-sm-6 col-xs-6"><input id="flip_lender_total" class="cal-2-textbox roi_text" type="text" value="0000" readonly></div>
+										</div>
+										<div class="col-sm-3 display-none"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        
+        <div class="col-sm-12 bottom-button">
+	    	<div class="flip_back col-sm-4"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></div>
+        	<div class="col-sm-4 back_menu_btn"><button class="btn btn-primary back_menu"> Back to Menu </button></div>
+            <div class="col-sm-4"><button id="next_lev" class="pull-right btn btn-primary"> NEXT </button></div>
+        </div>
+        
+        </div>    
+    </div> 
+    <!-- Flip Sildes End  -->   
+   
+    <!-- Hold Sildes Start  -->
+    <div id="hold_start">
+        
+        <div class="hold_start-slide-1">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1 class="flip-heading">CASH VS. LEVERAGE</h1>
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="flip-slide-bottom">
+	    		<div class="container">
+	    			<div class="row">
+	    				<div class="col-sm-12">
+	    					<div>
+	    						<div class="flip-stand">
+									<div class="calculation-box-1 slide-9-wrapper">
+										<div class="slide-9-top">
+											<div><img src="./images/house-1.png"></div>
+											<div class="price">$100,000</div>
+											<div class="price-text">ONE RENTAL HOUSE USING ALL CASH</div>
+										</div>
+
+										<div class="slide-9-middle">VS</div>
+
+										<div class="slide-9-bottom">
+											<div class="price">$98,000</div>
+											<div class="price-text">THREE RENTAL HOUSES USING SHERMAN BRIDGE PORTFOLIO LOAN </div>
+											<div><img src="./images/house-2.png"></div>
+										</div>
+									</div>
+								</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+    		</div>
+            <div class="col-sm-12 bottom-button">
+    	        <div class="hold_back"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></div>
+           		<button id="hold_power_lev" class="pull-right btn btn-primary"> SEE THE POWER OF LEVERAGE GRAPH</button>
+           	</div>
+        </div> 
+        
+        <div class="hold-slide2">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1 class="flip-heading">CASH VS. LEVERAGE</h1>
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="flip-slide-bottom">
+	    		<div class="container">
+	    			<div class="row">
+	    				<div class="col-sm-12">
+	    					<div>
+	    						<div class="flip-stand">
+									<div class="calculation-box-1 chart-img-wrapper">
+										<div class="chart-img"></div>
+									</div>
+								</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+    		</div>
+            <div class="col-sm-12 bottom-button">
+    	        <div class="hold_back pull-left"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></div>
+           		<div class="back_menu_btn pull-right"><button class="btn btn-primary back_menu"> Back to Menu </button></div>
+           	</div>
+        </div>
+        
+        <div class="hold-slide3">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-sm-12">
+    					<h1 class="flip-heading">LENDER VS. LENDER</h1>
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="flip-slide-bottom">
+			<div class="container-fluid">
+				<div class="row">
+					
+					<div class="col-sm-12 other-wrapper cal-1-wrapper">
+						<div class="col-sm-9 flip-cal-top">
+							<div class="calculation-box-1 cal-box-1">
+								<div class="col-sm-12">
+									<div class="hold-box-heading">ASSUMING $100,000 LOAN FOR 90 DAYS</div>
+								</div>
+							</div>
+						</div>
+                                    
+						<div class="col-sm-3">
+							<input id="Hold_Lender_calculate" class="flip_calculate" type="button" width="100%" value="Calculate"   />
+						</div>
+					</div>
+
+					<div class="col-sm-12 display-none vertical-seperator">
+						<div class="vertical-seperator-1"></div>
+						<div class="vertical-seperator-2"></div>
+					</div>
+
+					<div class="col-sm-12 flip-cal-bottom">
+						<div class="col-sm-5 flip-cal-2">
+							<div class="calculation-box-1">
+								<div class="col-sm-12 cal-boxes-heading"><h3>Sherman Bridge</h3></div>
+								<div class="col-sm-12 cal-2-textbox-wrapper">
+									<div class="col-sm-12 Origination-points" style="">
+										<div class="col-sm-6 col-xs-6 pull-right"><input id="" class="cal-2-textbox hold_len_org" type="text" value="$1,500" readonly></div>
+										<div class="col-sm-6 col-xs-6 pull-right hold_cal-box-heading cal-2-title hold_slide6_org">Origination Points</div>
+									
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-sm-1 display-none">
+							<div class="horizontal-seperator-1"></div>
+							<div class="horizontal-seperator-2"></div>
+						</div>
+
+						<div class="col-sm-6">
+							<div class="top-umbrella"></div>
+							<div class="flip-stand">
+								<div class="calculation-box-1 thick-border">
+									<div class="col-sm-12 cal-boxes-heading"><h3>Other Lenders</h3></div>
+									<div class="col-sm-12 cal-2-textbox-wrapper hold-cal-2-textbox">
+										<div class="col-sm-6 col-xs-12">
+											<div class="col-sm-6 col-xs-6 hold_cal-box-heading  cal-2-title">Your Points</div>
+											<div class="col-sm-6 col-xs-6"><input id="Hold_Lender1" class="cal-2-textbox number_textbox"  value="3.00" oninput="maxLengthCheck(this)" maxlength = "15"  min = "1"><span class="hold_percent">%</span></div>
+										</div>
+										<div class="col-sm-6 col-xs-12">
+											<div class="col-sm-6 col-xs-6 cal-box-heading cal-2-title">Origination</div>
+											<div class="col-sm-6 col-xs-6"><input id="hold_lender_org" class="cal-2-textbox" type="text" value="" readonly></div>
+										</div>
+										<div class="col-sm-6 cal-2-textbox-wrapper">
+											
+										</div>
+										<div class="col-sm-6 col-xs-12 cal-2-textbox-wrapper">
+											<div class="col-sm-6 col-xs-6 cal-box-heading cal-2-title">Refinancing</div>
+											<div class="col-sm-6 col-xs-6"><input id="hold_lender_ref" class="cal-2-textbox" type="text" value="" readonly></div>
+										</div>
+									</div>
+									<div class="col-sm-12 cal-2-textbox-wrapper hold-cal-2-textbox">
+										<div class="col-sm-3 display-none"></div>
+										<div class="col-sm-6 col-xs-12 pull-right">
+											<div class="col-sm-6 col-xs-6 cal-box-heading cal-2-title roi-heading">Total</div>
+											<div class="col-sm-6 col-xs-6"><input id="hold_lender_total" class="cal-2-textbox roi_text" type="text" value="" readonly></div>
+										</div>
+										<div class="col-sm-3 display-none"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+        <div class="col-sm-12 bottom-button">
+	        <div class="hold_back pull-left"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></div>
+       		<div class="back_menu_btn pull-right"><button class="btn btn-primary back_menu"> Back to Menu </button></div>
+       	</div>
+        
+        </div>
+    </div>
+</section>
+</body>
+</html>
